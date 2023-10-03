@@ -1,0 +1,72 @@
+   
+ * 1) What do you understand By Database :
+
+     A database is an organized collection of structured information, or data, typically stored electronically in a computer
+   system. A database is usually controlled by a database management system (DBMS).
+
+  * 2) What is Normalization? 
+
+       Normalization is the process of organizing data in a database. It includes creating tables and establishing
+   relationships between those tables according to rules designed both to protect the data and to make the database more
+   flexible by eliminating redundancy and inconsistent dependency.
+
+  * 3)  What is Difference between DBMS and RDBMS? 
+
+     DBMS stands for Database Management System, and RDBMS is the acronym for the Relational Database Management system.
+  In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
+ 
+  * 4) What is MF Cod Rule of RDBMS Systems?
+
+      Codd's rule in DBMS also known as Codd's 12 rules/commandments is a set of thirteen rules (numbered 0 to 12) that 
+   define a database to be a correct Relational Database Management System (RDBMS). If a database follows Codd's 12 rules,
+   it is called a True relational database management system.
+
+ * 5) What do you understand By Data Redundancy?
+
+      Data redundancy occurs when the same piece of data exists in multiple places, whereas data inconsistency is when
+  the same data exists in different formats in multiple tables. Unfortunately, data redundancy can cause data inconsistency,
+  which can provide a company with unreliable and/or meaningless information.
+
+  * 6) What is DDL Interpreter? 
+
+	DDL Interpreter DDL expands to Data Definition Language. DDL Interpreter as the name suggests interprets the DDL
+   statements such as schema definition statements like create, delete, etc. The result of this interpretation is a set
+   of a table that contains the meta-data which is stored in the data dictionary.
+
+ * 7) What is DML Compiler in SQL?
+
+	DML Compiler DML expands to Data Manipulation Language in DBMS. DML Compiler again as the name suggests compiles
+  (or translates) the DML statements such as select, update and delete statements into low-level instructions which is 
+  nothing but the machine-readable object code to make it executable.
+
+ * 8) What is SQL Key Constraints writing an Example of SQL Key Constraints.
+
+	SQL constraints are used to specify rules for the data in a table. Constraints are used to limit the type of data
+   that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation
+   between the constraint and the data action, the action is aborted.
+	CREATE TABLE STUDENT ( ID int , Name varchar(255) , Age int, CHECK (Age>=18) ); As we have used a check constraint
+   as (Age>=18) which means values entered by the user for this age column while inserting the data must be less than or
+   equal to 18 otherwise an error is shown.
+
+* 9)  What is save Point? How to create a save Point write a Query? 
+
+	A savepoint is a special mark inside a transaction that allows all commands that are executed after it was 
+   established to be rolled back, restoring the transaction state to what it was at the time of the savepoint.
+   
+       A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without
+   rolling back the entire transaction. Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME; This command is used only
+   in the creation of SAVEPOINT among all the transactions.
+
+* 10) What is trigger and how to create a Trigger in SQL? 
+
+	An SQL trigger is a database object that is associated with a table and automatically executes a set of SQL
+   statements when a specific event occurs on that table.
+
+	The schema_name is the name of the schema to which the new trigger belongs. The schema name is optional. The
+   trigger_name is the user-defined name for the new trigger. The table_name is the table to which the trigger applies.
+
+
+
+
+
+
