@@ -1,0 +1,112 @@
+1. Create Table Name : Student and Exam
+
+CREATE DATABASE tasksql;
+CREATE TABLE student
+(
+    rollnu int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255),
+    branch varchar(255)
+);
+INSERT INTO student (name,branch) VALUES ("jay","computer science"),("suhani","electonic and com"),("kriti","electronic and com")
+
+ 
+CREATE TABLE exam
+(
+    rollnu int not null,
+    s_code varchar(255),
+    marks varchar(255),
+    p_code varchar(244),
+    FOREIGN KEY (rollnu) REFERENCES student (rollno_id)
+);
+INSERT INTO exam(roll_no,s_code,marks,p_code) VALUES (1,"cs11",50,"cs"),(1,"cs12",60,"cs"),(2,"ec101",66,"ec"),(2,"ec102",70,ec),(3,"ec101",45,"ec"),(3,"es102",50,"50")
+
+ 
+
+
+2) Create table
+
+CREATE TABLE personal_info(
+firstname varchar (255),
+lastname varchar (255),
+addresh varchar (255),
+city varchar (255),
+age int
+);
+
+INSERT INTO personal_info (firstname,lastname,addresh,city,age)VALUES("micky","mouse","123 fantacy way","anheim",73),("bat","man","321 cavern ave","gotham",54),("wonder","women","987 truth way","paradise",39),("donald","duck","555 quack strect","mallared",65),("bugs","bunny","567 cattor street","rascal",58),("willey","coyato","999 acme way","canyon",61),("cat","women","234 perfact street","hair ball",32),("twinty","bird","543","itotlow",28)
+
+ 
+
+3)
+CREATE DATABASE TASK3
+CREATE TABLE employee
+(
+    employee_id int PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar(255),
+    last_name varchar(255),
+    salary varchar(255),
+    joining_date varchar(255),
+    department varchar(255)
+);    
+
+INSERT INTO       	 employee(first_name,last_name,salary,joining_date,department)VALUES("michleal","cleark","800000","01-jan-13 12:00 am","insurance"),("roy","thomas","700000","01-fab-13 12:00 am","banking"),("tom","jose","600000","01-fab-13 12:00 am","insurance"),("jerry","pinto","650000","01-fab-13 12:00","insurance"),("phiip","mathew","750000","01-jan-13 12:00 am","services"),("testname1","123","650000","01-jan-13 12:00 am","services"),("testname2","lname%","600000","01-fab-13 12:00 am","insurance")
+    
+ 
+create TABLE incintiv(
+    employee_ref_id int ,
+    incentiv_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    incentiv_amount int,
+    FOREIGN KEY(employee_ref_id) REFERENCES employee(employee_id)
+);
+INSERT into incintiv(incentiv_AMT) VALUES(5000),(3000),(4000),(4500),(3500)
+ 
+a) SELECT * FROM `employee` WHERE first_name="tom"
+ 
+b)SELECT first_name,joining_date,salary FROM `employee` 
+ 
+
+c)SELECT first_name,salary FROM `employee` ORDER by first_name ASC ,salary DESC
+ 
+
+d)SELECT first_name FROM `employee` WHERE first_name like "%j%"
+ 
+e)SELECT department,max(salary) FROM `employee`GROUP BY department ORDER BY salary ASC;
+ 
+f)SELECT first_name,incentiv_amount from employee   inner JOIN incintiv   on employee.employee_id = incintiv.employee_ref_id and incentiv_amount > 3000 ;
+
+4)
+CREATE DATABASE TASK4;
+CREATE TABLE SALES_PERSON(
+  SNO int PRIMARY key AUTO_INCREMENT,
+    SNAME varchar(50),
+    CITY varchar(50),
+    COMM float
+ );
+INSERT INTO `sales_person` (`SNO`, `SNAME`, `CITY`, `COMM`) VALUES ('1001', 'PEEL', 'LONDON', '0.12');
+INSERT INTO `sales_person` (`SNO`, `SNAME`, `CITY`, `COMM`) VALUES ('1002', 'SERRES','SAN JOSE', '0.13');
+INSERT INTO `sales_person` (`SNO`, `SNAME`, `CITY`, `COMM`) VALUES ('1003', 'AXELROD', 'NEW YORK', '0.1');
+INSERT INTO `sales_person` (`SNO`, `SNAME`, `CITY`, `COMM`) VALUES ('1004', 'MOTIKA', 'LONDON', '0.11');
+INSERT INTO `sales_person` (`SNO`, `SNAME`, `CITY`, `COMM`) VALUES ('1007', 'RAFKIN', 'BARCELONA', '0.15');
+ 
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('201', 'HOFFMAN', 'LONDON', '100', '1001');
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('202', 'giovanne', 'roe', '200', '1003');
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('203', 'liu', 'san jose', '300', '1002');
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('204', 'grass', 'barcelona', '100', '1002');
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('206', 'clemens', 'LONDON', '300', '1007');
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNO`) VALUES ('207', 'pereira', 'roe', '100', '1004');
+ 
+
+B) SELECT SNAME, CITY,COMM FROM sales_person WHERE CITY = "LONDON" and COMM > 0.10;
+ 
+
+c)SELECT SNAME FROM `sales_person` WHERE CITY="barcelona" or CITY="london";
+ 
+
+d) SELECT SNAME FROM `sales_person` WHERE COMM > .10 and COMM < .12 ;
+ 
+
+e) SELECT * FROM customer WHERE rating > 100 or CITY="rome" ;
+ 
+
+
+
