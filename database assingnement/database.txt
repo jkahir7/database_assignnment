@@ -1,0 +1,54 @@
+	   
+ * 1) What do you understand By Database :
+
+	> a database is a collection of informaion or data, and stored data electronically in a computer
+
+  * 2) What is Normalization? 
+
+     	> normlization is a process of  remove duplicate data in table.
+	  there are 4 types of memoriation
+	  1 - 1nf(first normal form)
+	  2 - 2nf (first normal form)
+	  3 - 3nf (first normal form)
+	  4 - bcmf(boycee and codd normal form)
+
+  * 3)  What is Difference between DBMS and RDBMS? 
+
+     DBMS is Database Management System, and RDBMS is the Relational Database Management system.
+     the main diffrance between dbms and rdbms is that in dbms tables and data are not related to other tables while in rdbms 
+     one table may related to more then one table.
+
+ * 5) What do you understand By Data Redundancy?
+
+	> Data Redundancy is used to remave duplicate data.
+     
+  * 6) What is DDL Interpreter? 
+
+	> ddl is data dafination language.in ddl we can perfom create,ulter,drop and trunket opration
+	
+ * 7) What is DML Compiler in SQL?
+
+	> dml is data manipulation language.in dml we can perform insert,update and delete operation.
+
+ * 8) What is SQL Key Constraints writing an Example of SQL Key Constraints.
+
+	> there are three type of key in sql :
+		1.primary key
+		2.unique key
+		3.foreign key
+
+.
+* 9)  What is save Point?  
+
+	A savepoint is a special mark inside a transaction that allows all commands that are executed after it was 
+   established to be rolled back, restoring the transaction state to what it was at the time of the savepoint.
+   
+* 10) What is trigger L? 
+
+	>trigger is used to show the changes of one table in unthor table.
+
+
+
+
+
+
